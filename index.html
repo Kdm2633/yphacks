@@ -4,9 +4,140 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My website</title>
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/4336aaf0f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstap Css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Study Buddies</title>
 </head>
 <body>
+  <section id="title">
+    <!-- Nav Bar -->
+    <div class="container-fluid navbar-container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="">StudyBuddies</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">Join a Session</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Find a Friend</a>
+            </li>
+            <li>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Text Under Navbar -->
+    <div>
+      <h1>Study Buddies Is A Place Too...</h1>
+      <p id="title-text">Meet Friends, Practice Your Social Skills, and Study</p>
+      <button class="intro-btn btn btn-outline-light btn-lg download-button" type="button"> <i class="fa-solid fa-lock"></i> Register</button>
+      <button class="intro-btn btn btn-outline-light btn-lg download-button" type="button"> <i class="fa-solid fa-user"></i></i> Sign In</button>
+    </div>
+  </section> 
+
+  <!-- Explanation of Website -->
+  <section id="product-showcase">
+    <div class="row container-fluid">
+      <div class="col-lg-6 example1">
+        <h2 style="float: left;"><u>Your</u> Private Safe Space</h2>
+        <p class="product-example-text">Study Buddy offers the ability to create private sessions to allow you to study, hangout, and more whenever and with whomever you want.</p>
+        <img class="textbooks-img" src="./assets/book-4109187_1280.png" alt="textbooks-img">
+      </div>
+      <div class="col-lg-6 example2">
+        <h2><u>Exclusive</u> Messaging</h2>
+        <p class="product-example-text">An encrypted messaging system between you and others offers a completely private expierience.</p>
+        <img class="lamp-img" src="./assets/desk-lamp-6202829_1280.png">
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Carousel -->
+  <section id="testimonials">
+    <div
+      id="testimonial-carousel"
+      class="carousel slide"
+      data-bs-slide="false"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <h2 class="testimonial-text"> "I met so many new people and made so many friends, thanks StudyBuddies!"</h2>
+          <img class="testimonial-image" src="assets/boy-img.jpg" alt="boy-profile"
+          />
+          <em>Jhon, New Hampshire</em>
+        </div>
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">"During virtual learning I felt alone and a little depressed but now I am able find to others in my situation and my mental health has improved so much."</h2>
+          <img class="testimonial-image" src="assets/girl-img.jpg" alt="girl-profile" />
+          <em>Sarah, Pennsylvania</em>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev" >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next" >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Call To Action Section -->
+  <section id="cta">
+    <div>
+      <h3>Register Now to Join The Community of Over </h3>
+      <h3 class="counter" data-target="1750000">0</h3>
+      <h3> People Today!</h3>
+    </div>
+    <button class="cta-btn btn btn-outline-light btn-lg download-button" type="button"> <i class="fa-solid fa-lock"></i> Register</button>
+    <button class="cta-btn btn btn-outline-light btn-lg download-button" type="button"> <i class="fa-solid fa-user"></i></i> Sign In</button>
+  </section>
+  <!-- Footer Section -->
+  <footer id="footer">
+    <!-- Twitter icon -->
+    <i class="footer-icon fab fa-twitter"></i> 
+    <!-- Facebook icon -->
+    <i class="footer-icon fab fa-facebook-f"></i> 
+    <!-- Instagram icon -->
+    <i class="footer-icon fab fa-instagram"></i> 
+    <!-- Mail Icon -->
+    <i class="footer-icon fas fa-envelope"></i> 
+    <p>© Copyright StudyBuddies</p>
+</footer>
     
 </body>
-</html>f
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<!-- JS File -->
+<script src="index.js"></script>
+</html>
+
+
