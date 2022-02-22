@@ -1,16 +1,48 @@
+/*To do:
+-Add messaging and user stats css
+-Make CSS responsive
+-Add logo
+*/
+body{
+  background-color: #112031;
+}
 .userSearch{
-  position: absolute;
-  left: 40%;
-  margin-top: 25px;
-  margin-bottom: 45px;
-  width: 200px;
+  margin:auto;
+  margin-top: 50px;
+  border: 50px, transparent;
+  border-radius: 30px;
+  width: 500px;
   height: 50px;
   padding: 30px;
-  background-color: #D4ECDD;  
-  text-align: center;
+  background-color: #D4ECDD; 
 }
 
-input{
-  display: flex;
-  justify-content:space-around;
+.searchInput{
+  outline: none;
+  border: none;
+  float: left;
+  border-radius: 30px;
+  color: #112031;
+  font-family: "Sans Serif", ;
+  font-size: x-large;
+  padding:15px;
+  padding-right: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: whitesmoke;
+}
+
+.friendsListContainer{
+  margin:auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 50px, transparent;
+  border-radius: 30px;
+  width: 500px;
+  height: 250px;
+  padding: 30px;
+  background-color: #D4ECDD; 
+  text-align: center;
+  /*When the friend list gets too long a scroll bar appears*/
+  overflow:scroll;
 }
