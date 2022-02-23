@@ -3,6 +3,11 @@
 -Make CSS responsive
 -Add logo
 */
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body{
   background-color: #112031;
 }
@@ -17,13 +22,13 @@ body{
   background-color: #D4ECDD; 
 }
 
-.searchInput{
+#searchInput{
   outline: none;
   border: none;
   float: left;
   border-radius: 30px;
   color: #112031;
-  font-family: "Sans Serif", ;
+  font-family: "Poppins", sans-serif;
   font-size: x-large;
   padding:15px;
   padding-right: 150px;
@@ -32,17 +37,45 @@ body{
   background-color: whitesmoke;
 }
 
-.friendsListContainer{
+.searchOutput{
   margin:auto;
   margin-top: 50px;
-  margin-bottom: 50px;
   border: 50px, transparent;
   border-radius: 30px;
   width: 500px;
-  height: 250px;
   padding: 30px;
   background-color: #D4ECDD; 
   text-align: center;
-  /*When the friend list gets too long a scroll bar appears*/
-  overflow:scroll;
+}
+
+li{
+  list-style-type: none;
+  display: inline-block;
+}
+
+.userProfile{
+  display: inline-block;
+  margin:auto;
+  border-radius: 30px;
+  width: 350px;
+  height: 50px;
+  padding: 30px;
+  background-color: #345B63;
+}
+
+.userProfile img{
+  margin-right: 300px;
+  height: 60px;
+  width: 60px;
+  z-index: 0;
+}
+
+.userProfile p{
+  position: relative;
+  bottom: 60px;
+  right:50px;
+  text-align: center;
+  font-size: 30px;
+  font-family: "open sans";
+  color: #D4ECDD;
 }
