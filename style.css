@@ -1,160 +1,169 @@
 body {
-    color: white;
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
-  }
-  
-  h1, h2, h3 {
-    font-weight: 900;
-    font-family: "Poppins";
-  }
-  
-  h1 {
-    font-size: 3.5rem;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-  }
-  
-  h3 {
-    display: inline;
-    font-size: 1.5rem;
-  }
-  
-  /* Containers */
-  
-  .navbar-container {
-    padding: 3% 8%;
-    font-size: 3rem;
-  }
-  
-  
-  /* Images */
-  
+  color: white;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  font-family: "Poppins";
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  display: inline;
+  font-size: 1.5rem;
+}
+
+/* Brand Name */
+.brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Containers */
+
+.navbar-container {
+  padding: 3% 8%;
+  font-size: 3rem;
+}
+
+/* Images */
+
+.lamp-img {
+  width: 85%;
+}
+
+.textbooks-img {
+  position: relative;
+  top: 10rem;
+  width: 120%;
+  transform: rotate(2deg);
+}
+
+@media (max-width: 1028px) {
   .lamp-img {
-    width: 85%;
+    display: none;
   }
-  
+}
+
+@media (max-width: 1153px) {
   .textbooks-img {
-    position: relative;
-    top: 10rem;
-    width: 120%;
-    transform: rotate(2deg);
+    transform: rotate(0deg);
+    position: static;
   }
-  
-  @media (max-width: 1028px) {
-    .lamp-img {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 1153px) {
-    .textbooks-img {
-      transform: rotate(0deg);
-      position: static;
-    }
-  }
-  
-  /* Title Section */
-  #title {
-    background-color: #112031;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-  }
-  
-  .nav-item {
-    padding: 0 18px;
-  }
-  
-  .nav-link {
-    font-size: 1.2rem;
-  }
-  
-  #title-text {
-    line-height: 3.5;
-    font-size: 3rem;
-    font-weight: 700;
-  }
-  
-  
-  /* Buttons */
-  
-  .btn {
-    margin: 2% 3% 5% 0;
-    border-radius: 28px;
-    font-family: "Open Sans";
-    size: 0.5rem;
-  }
-  
-  .intro-btn {
-    padding: 1% 5%;
-  }
-  
-  .cta-btn {
-    margin-top: 3%;
-    padding: 1% 3%;
-  }
-  
-  /* Product Examples */
-  #product-showcase {
-    padding: 7% 15%;
-    background-color: #152d35;
-  }
-  
-  .example1 {
-    text-align: left;
-  }
-  
-  .example2 {
-    text-align: right;
-  }
-  
-  .product-example-text {
-    padding-top: 5%;
-    line-height: 1.5;
-    font-size: 1.25rem;
-    font-weight: 400;
-    float: left;
-  }
-  
-  
-  /* Testimonial Section */
-  
-  #testimonials {
-    padding: 7% 0%;
-    line-height: 1.5rem;
-    background-color: #345b63;
-  }
-  
-  .testimonial-image {
-    width: 10%;
-    border-radius: 100%;
-    margin: 20px;
-    height: 10%;
-  }
-  
-  /* CTA Section */
-  
-  #cta {
-    padding: 7% 0%;
-    line-height: 1.5rem;
-    background-color: #152d35;
-  }
-  
-  
-  /* Footer */
-  #footer {
-    padding: 3% 0%;
-    line-height: 1.5rem;
-    background-color: #345b63;
-  }
-  
-  .footer-icon {
-    margin: 1.5% 1%;
-  }
-  
-  /* .btn-1 {
+}
+
+.logo-img {
+  width: 20%;
+  margin-right: 2.5%;
+}
+
+/* Title Section */
+#title {
+  background-color: #112031;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+#title-text {
+  padding-top: 2%;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* Buttons */
+
+.btn {
+  margin: 2% 3% 5% 0;
+  border-radius: 28px;
+  font-family: "Open Sans";
+  size: 0.5rem;
+}
+
+.intro-btn {
+  padding: 1% 5%;
+}
+
+.cta-btn {
+  margin-top: 3%;
+  padding: 1% 3%;
+}
+
+/* Product Examples */
+#product-showcase {
+  padding: 7% 15%;
+  background-color: #152d35;
+}
+
+.example1 {
+  text-align: left;
+}
+
+.example2 {
+  text-align: right;
+}
+
+.product-example-text {
+  padding-top: 5%;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 400;
+  float: left;
+}
+
+/* Testimonial Section */
+
+#testimonials {
+  padding: 7% 0%;
+  line-height: 1.5rem;
+  background-color: #345b63;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+  height: 10%;
+}
+
+/* CTA Section */
+
+#cta {
+  padding: 7% 0%;
+  line-height: 1.5rem;
+  background-color: #152d35;
+}
+
+/* Footer */
+#footer {
+  padding: 3% 0%;
+  line-height: 1.5rem;
+  background-color: #345b63;
+}
+
+.footer-icon {
+  margin: 1.5% 1%;
+}
+
+/* .btn-1 {
       border-radius: 28px;
       box-shadow: 5px 5px 3px #161616;
       font-family: "Open Sans";
@@ -173,4 +182,3 @@ body {
   
   
   } */
-  
