@@ -55,12 +55,13 @@ li{
 
 .userProfile{
   display: inline-block;
-  margin:auto;
   border-radius: 30px;
   width: 350px;
   height: 50px;
   padding: 30px;
   background-color: #345B63;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .userProfile img{
@@ -74,8 +75,22 @@ li{
   position: relative;
   bottom: 60px;
   right:50px;
+  margin: auto;
   text-align: center;
   font-size: 30px;
   font-family: "open sans";
   color: #D4ECDD;
+}
+
+.noUserFound img{
+  width: 25%;
+  height: 25%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.noUserFound h1{
+  color: red;
+  font-size: 68px;
+}
 }
