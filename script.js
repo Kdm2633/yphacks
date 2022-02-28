@@ -2,10 +2,10 @@
 //Add function that displays friend list
 //Add function that adds and removes friend from list.
 //Add function that matches user to people with similar study topics selected
-//<div class="userProfile"><img src="assets/user.png" alt="username"></img> <p>name</p></div>;
 //Temporary list of users, will replace later
 var users = ["bob", "kamya", "sean", "nihal", "sam"];
 var kamyaFriends = ["bob", "sam"];
+var userPFPs = ["assets/bobPFP.png","assets/kamyaPFP.png","assets/seanPFP.png","assets/nihalPFP.png","assets/samPFP.png"];
 
 //When a user press enter after entering an input, the website will search for users
 var search = document.getElementById("searchInput");
@@ -13,7 +13,7 @@ search.addEventListener("keypress", event =>{
   if(event.key === "Enter"){
    userSearch();
   }
-  if(event.key==="m"){ //For testing purposes for the clearSearchOutput method
+  if(event.key===";"){ //For testing purposes for the clearSearchOutput method
       clearSearchOutput();
   }
 });
@@ -28,7 +28,8 @@ function userSearch(){
     //Goes through users collection to see if a user has the searched username
   for (var i = 0; i < users.length; i++) {
     if(users[i].includes(search.value)){
-        addProfile();
+        clearSearchOutput();
+        addProfile(users[i], userPFPs[i]);
         numUsersFound++;
      }
   }
@@ -36,32 +37,47 @@ function userSearch(){
   //bug: when just pressing enter it returns it's searching for something, idk why 
   if(numUsersFound==0){
     const profileList = document.querySelector(".profileList");
+    const noUserContainer = document.createElement("DIV");
+    noUserContainer.setAttribute("class", "noUserFound");
     const noUserImg = document.createElement("IMG");
-    noUserImg.setAttribute("src", "assets/mug-hot.png");
-    noUserImg.setAttribute("class", "noUserFound");
-    const label = document.createElement("H1");
-    label.innerText = "No Users Found";
+    noUserImg.setAttribute("src", "https://raw.githubusercontent.com/Kdm2633/yphacks/Kamya/assets/mug-hot.png");
+    const noUserText = document.createElement("P");
+    noUserText.innerText = "No Users Found";
 
-    profileList.appendChild(noUserImg, label);
+    profileList.appendChild(noUserContainer);
+  noUserContainer.appendChild(noUserImg, noUserText);
  } 
 }
 
-function addProfile(){
+//Adds profiles found to search output
+function addProfile(user, picture){
+  console.log("add started");
     const profileList = document.querySelector(".profileList");
     const newUserProfile = document.createElement("DIV");
     newUserProfile.setAttribute("class","userProfile");
     const newUserImg = document.createElement("IMG");
-    newUserImg.setAttribute("src", "assets/user.png");
-    const newUserName = document.createElement("P");
-    newUserName.innerText = "name";
-
+    newUserImg.setAttribute("src", picture);
+    const newUserName = document.createElement("p");
+    newUserName.id= user;
     profileList.appendChild(newUserProfile);
-    newUserProfile.appendChild(newUserImg, newUserName);
+    newUserProfile.appendChild(newUserImg);
+    newUserProfile.appendChild(newUserName);
+    document.getElementById(user).innerHTML = user;
+   console.log("add ended");
 }
 
 function clearSearchOutput(){
+    console.log("clear started");
     const profileList = document.querySelector(".profileList");
-    profileList.removeChild(document.querySelector("userProfile"));   
+    const  profiles = document.querySelectorAll(".userProfile");
+    //profiles.remove();
+    console.log("clear ended");
 }
 
+function addFriend(){
+  
+}
 
+function removeFriend(){
+  
+}
