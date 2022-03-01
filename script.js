@@ -3,9 +3,7 @@
 //Add function that adds and removes friend from list.
 //Add function that matches user to people with similar study topics selected
 //Temporary list of users, will replace later
-var users = ["bob", "kamya", "sean", "nihal", "sam"];
-var kamyaFriends = ["bob", "sam"];
-var userPFPs = ["assets/bobPFP.png","assets/kamyaPFP.png","assets/seanPFP.png","assets/nihalPFP.png","assets/samPFP.png"];
+var users = data.js.users;
 
 //When a user press enter after entering an input, the website will search for users
 var search = document.getElementById("searchInput");
