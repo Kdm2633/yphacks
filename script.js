@@ -1,5 +1,5 @@
 //To Do:
-//Add function that displays friend list
+//Add function that displays friend list!
 //Add function that adds and removes friend from list.
 //Add function that matches user to people with similar study topics selected
 //Temporary list of users, will replace later
