@@ -11,10 +11,18 @@
 body{
   background-color: #112031;
 }
+
+/*Left side CSS*/
+.left{
+  margin:auto;
+  margin-left: 550px;
+  overflow: hidden;
+  display: inline-block;
+}
+
 .userSearch{
   margin:auto;
   margin-top: 50px;
-  border: 50px, transparent;
   border-radius: 30px;
   width: 500px;
   height: 50px;
@@ -93,4 +101,31 @@ li{
   color: red;
   font-size: 68px;
 }
+
+/*Right side CSS*/
+.right{
+  margin:auto;
+  margin-left: 50px;
+  overflow: hidden;
+  display: inline-block;
+  
+}
+
+.userStats{
+  margin:auto;
+  margin-bottom: 50px;
+  border-radius: 30px;
+  width: 500px;
+  height: 50px;
+  padding: 30px;
+  background-color: #D4ECDD; 
+  display: inline-block;
+}
+
+.friendsListContainer{
+  border-radius: 30px;
+  width: 500px;
+  padding: 30px;
+  background-color: #D4ECDD; 
+  text-align: center;
 }
