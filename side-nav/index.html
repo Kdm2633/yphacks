@@ -19,24 +19,47 @@
       crossorigin="anonymous"
     />
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/side-nav.css">
     <title>Study Buddies</title>
 </head>
 <body>
   <section id="title">
     <!-- Nav Bar -->
-    <div class="wrapper">
-        <div class="sidebar">
-            <h2>Sidebar</h2>
-            <ul style="">
-                <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-                <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
-            </ul> 
+    <div class="container-fluid nav-container">
+      <div class="sidebar">
+        <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+        <h2>StudyBuddies</h2>
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+        </ul> 
+      </div>
+      <button type="button" class="open-btn"><i class="fa-solid fa-bars fa-3x"></i></button>
+    </div>
+    <div class="name-and-logo">
+      <p class="nav-text"><a href="">StudyBuddies</a><img class="logo-img" src="../assets/transparentLogo-Image.png"></p>
+    </div>
+    <div class="container-fluid navbar-container">
+      <nav class="navbar navbar-expand-lg navbar-dark" >
+        <a class="navbar-brand brand" href=""><img class="logo-img" src="../assets/transparentLogo-Image.png">StudyBuddies</a>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Profile</a>
+            </li>
+          </ul>
         </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
     </div>
 
     <!-- Text Under Navbar -->
-    <div>
+    <div class="header">
       <h1>Study Buddies Is A Place Too...</h1>
       <p id="title-text">Meet Friends, Practice Social Skills, and Study</p>
       <button class="intro-btn btn btn-outline-light btn-lg download-button" type="button"> <i class="fa-solid fa-lock"></i> Register</button>
@@ -50,12 +73,12 @@
       <div class="col-lg-6 example1">
         <h2 style="float: left;"><u>Your</u> Private Space</h2>
         <p class="product-example-text">Study Buddy offers the ability to create private sessions to allow you to study, hangout, and more whenever and with whomever you want.</p>
-        <img class="textbooks-img" src="./assets/textbooks-img.webp" alt="textbooks-img">
+        <img class="textbooks-img" src="../assets/textbooks-Image.webp" alt="textbooks-img">
       </div>
       <div class="col-lg-6 example2">
         <h2><u>Exclusive</u> Messaging</h2>
         <p class="product-example-text">An encrypted messaging system between you and others offers a completely private expierience.</p>
-        <img class="lamp-img" src="./assets/desk-lamp.png">
+        <img class="lamp-img" src="../assets/deskLamp-Image.png">
       </div>
     </div>
   </section>
@@ -70,13 +93,13 @@
       <div class="carousel-inner">
         <div class="carousel-item active container-fluid">
           <h2 class="testimonial-text"> "I met so many new people and made so many friends, thanks StudyBuddies!"</h2>
-          <img class="testimonial-image" src="assets/boy-img2.png" alt="boy-profile"
+          <img class="testimonial-image" src="../assets/boy-Image.jfif" alt="boy-profile"
           />
           <em>Jhon, New Hampshire</em>
         </div>
         <div class="carousel-item container-fluid">
           <h2 class="testimonial-text">"During virtual learning I felt alone and a little depressed but now I am able find to others in my situation and my mental health has improved so much."</h2>
-          <img class="testimonial-image" src="assets/girl-img.jpg" alt="girl-profile" />
+          <img class="testimonial-image" src="../assets/girl-Image.jpg" alt="girl-profile" />
           <em>Sarah, Pennsylvania</em>
         </div>
       </div>
@@ -118,7 +141,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <!-- JS File -->
-<script src="index.js"></script>
+<script src="../JS/side-nav.js"></script>
 </html>
 
 
