@@ -2,18 +2,14 @@
 //Add function that displays friend list!
 //Add function that adds and removes friend from list.
 //Add function that matches user to people with similar study topics selected
-//Temporary list of users, will replace later
-/*var users = ["bob", "kamya", "sean", "nihal", "sam"];
-var kamyaFriends = ["bob", "sam"];
-var userPFPs = ["assets/bobPFP.png","assets/kamyaPFP.png","assets/seanPFP.png","assets/nihalPFP.png","assets/samPFP.png"];
-*///When a user press enter after entering an input, the website will search for users
+
+//user currently logged in
+//var loggedInUser = users[1];
+
 var search = document.getElementById("searchInput");
 search.addEventListener("keypress", event =>{
   if(event.key === "Enter"){
    userSearch();
-  }
-  if(event.key===";"){ //For testing purposes for the clearSearchOutput method
-      clearSearchOutput();
   }
 });
 
@@ -27,7 +23,6 @@ function testing(){
     //Goes through users collection to see if a user has the searched username
   for (var i = 0; i < users.length; i++) {
     if(users[i].username.includes(search.value)){
-        //clearSearchOutput();
         addProfile(users[i].username, users[i].pfp);
         numUsersFound++;
      }
@@ -50,7 +45,6 @@ function testing(){
 
 //Adds profiles found to search output
 function addProfile(user, picture){
-  console.log("add started");
     const profileList = document.querySelector(".profileList");
     const newUserProfile = document.createElement("DIV");
     newUserProfile.setAttribute("class","userProfile");
@@ -62,7 +56,6 @@ function addProfile(user, picture){
     newUserProfile.appendChild(newUserImg);
     newUserProfile.appendChild(newUserName);
     document.getElementById(user).innerHTML = user;
-   console.log("add ended");
 }
 
 function clearSearchOutput(){
@@ -80,3 +73,11 @@ function addFriend(){
 function removeFriend(){
   
 }
+
+ function loadInfo(){
+   console.log("checkpoint");
+  for (var i = 0; i < loggedInUser.friends.length; i++) {
+    console.log(loggedInUser.friends[i]);    
+    //addProfile(users[i].username, users[i].pfp);
+  }
+ }

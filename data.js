@@ -11,7 +11,8 @@ var users = [
         password: "rosesAreRed",
         pfp: "assets/user.png",
         friendRequests: [],
-        friends: []
+        friends: ["bob", "sam"]
+        //friends: [users[0], users[4]]
     },
     {
         username: "seanNN",

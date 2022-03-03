@@ -124,8 +124,7 @@ li{
   height: 50px;
   padding: 30px;
   background-color: #D4ECDD;
-  justify-content: center;
-  align-items: center;
+  vertical-align: middle;
 }
 
 .userStats h1{
