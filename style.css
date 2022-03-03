@@ -10,14 +10,17 @@
 
 body{
   background-color: #112031;
+  display: grid;
+  column-gap: 0px;
+  justify-content: space-around;
 }
 
 /*Left side CSS*/
 .left{
-  margin:auto;
-  margin-left: 550px;
+  grid-column: 4;
   overflow: hidden;
   display: inline-block;
+  width: fit-content;
 }
 
 .userSearch{
@@ -36,7 +39,7 @@ body{
   float: left;
   border-radius: 30px;
   color: #112031;
-  font-family: "Poppins", sans-serif;
+  font-family: "open sans", sans-serif;
   font-size: x-large;
   padding:15px;
   padding-right: 150px;
@@ -70,7 +73,9 @@ li{
   background-color: #345B63;
   margin-top: 5px;
   margin-bottom: 5px;
+  justify-content: center;
 }
+
 
 .userProfile img{
   margin-right: 300px;
@@ -82,7 +87,6 @@ li{
 .userProfile p{
   position: relative;
   bottom: 60px;
-  right:50px;
   margin: auto;
   text-align: center;
   font-size: 30px;
@@ -99,30 +103,47 @@ li{
 
 .noUserFound h1{
   color: red;
+  font-family: "Poppins", sans-serif;
+  font-style: bold;
   font-size: 68px;
 }
 
 /*Right Side CSS*/
 .right{
-  margin:auto;
-  margin-left: 50px;
+  grid-column: 5;
   overflow: hidden;
   display: inline-block;
-  
+  width: fit-content;
 }
 
 .userStats{
   margin:auto;
-  margin-bottom: 50px;
+  margin-top: 50px;
   border-radius: 30px;
   width: 500px;
   height: 50px;
   padding: 30px;
-  background-color: #D4ECDD; 
-  display: inline-block;
+  background-color: #D4ECDD;
+  justify-content: center;
+  align-items: center;
+}
+
+.userStats h1{
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  margin-left: 15px;
+  padding: 0px;
+}
+
+.userStats img{
+  width: 50px;
+  height: 50px;
 }
 
 .friendsListContainer{
+  margin:auto;
+  margin-top: 50px;
+  border: 50px, transparent;
   border-radius: 30px;
   width: 500px;
   padding: 30px;

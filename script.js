@@ -3,9 +3,10 @@
 //Add function that adds and removes friend from list.
 //Add function that matches user to people with similar study topics selected
 //Temporary list of users, will replace later
-var users = ["bob", "Kamya", "Sean", "Nihal"];
-
-//When a user press enter after entering an input, the website will search for users
+/*var users = ["bob", "kamya", "sean", "nihal", "sam"];
+var kamyaFriends = ["bob", "sam"];
+var userPFPs = ["assets/bobPFP.png","assets/kamyaPFP.png","assets/seanPFP.png","assets/nihalPFP.png","assets/samPFP.png"];
+*///When a user press enter after entering an input, the website will search for users
 var search = document.getElementById("searchInput");
 search.addEventListener("keypress", event =>{
   if(event.key === "Enter"){
@@ -21,13 +22,13 @@ function testing(){
     console.log("123");
 }
 
-function userSearch(){
+  function userSearch(){
     var numUsersFound = 0;
     //Goes through users collection to see if a user has the searched username
   for (var i = 0; i < users.length; i++) {
-    if(users[i].includes(search.value)){
-        clearSearchOutput();
-        addProfile(users[i], userPFPs[i]);
+    if(users[i].username.includes(search.value)){
+        //clearSearchOutput();
+        addProfile(users[i].username, users[i].pfp);
         numUsersFound++;
      }
   }
@@ -38,7 +39,7 @@ function userSearch(){
     const noUserContainer = document.createElement("DIV");
     noUserContainer.setAttribute("class", "noUserFound");
     const noUserImg = document.createElement("IMG");
-    noUserImg.setAttribute("src", "https://raw.githubusercontent.com/Kdm2633/yphacks/Kamya/assets/mug-hot.png");
+    noUserImg.setAttribute("src", "assets/mug-hot.png");
     const noUserText = document.createElement("P");
     noUserText.innerText = "No Users Found";
 
@@ -68,7 +69,7 @@ function clearSearchOutput(){
     console.log("clear started");
     const profileList = document.querySelector(".profileList");
     const  profiles = document.querySelectorAll(".userProfile");
-    //profiles.remove();
+    profileList.remove(profiles);
     console.log("clear ended");
 }
 
