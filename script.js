@@ -31,7 +31,7 @@ function testing(){
   //If no users are found then it will display a no users found message.
   //bug: when just pressing enter it returns it's searching for something, idk why 
   if(numUsersFound==0){
-    const profileList = document.querySelector(".profileList");
+    const profileList = document.getElementById("searchedList");
     const noUserContainer = document.createElement("DIV");
     noUserContainer.setAttribute("class", "noUserFound");
     const noUserImg = document.createElement("IMG");
@@ -44,9 +44,9 @@ function testing(){
  } 
 }
 
-//Adds profiles found to search output
+//Adds profiles found to outputs
 function addProfile(user, picture){
-    const profileList = document.querySelector(".profileList");
+    const profileList = document.getElementById("searchedList");
     const newUserProfile = document.createElement("DIV");
     newUserProfile.setAttribute("class","userProfile");
     const newUserImg = document.createElement("IMG");
@@ -59,12 +59,12 @@ function addProfile(user, picture){
     document.getElementById(user).innerHTML = user;
 }
 
+//clears search output everytime a user is searched
 function clearSearchOutput(){
-    console.log("clear started");
-    const profileList = document.querySelector(".profileList");
-    const  profiles = document.querySelectorAll(".userProfile");
-    //profileList.remove(profiles);
-    console.log("clear ended");
+    const profileList = document.getElementById("searchedList");
+    while(profileList.childElementCount>0){
+      profileList.lastChild.remove();
+    }
 }
 
 function addFriend(){

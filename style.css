@@ -1,6 +1,5 @@
 /*To do:
 -Make CSS responsive
--Add logo
 */
 *{
   margin: 0;
@@ -71,6 +70,7 @@ body{
   text-align: center;
 }
 
+/*For searched list and friends list*/
 li{
   list-style-type: none;
   display: inline-block;
