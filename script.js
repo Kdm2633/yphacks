@@ -36,11 +36,13 @@ function testing(){
     noUserContainer.setAttribute("class", "noUserFound");
     const noUserImg = document.createElement("IMG");
     noUserImg.setAttribute("src", "assets/mug-hot.png");
-    const noUserText = document.createElement("P");
-    noUserText.innerText = "No Users Found";
-
+    const noUserText = document.createElement("H1");
+    noUserText.id = "noUserFoundTxt";
+    console.log(noUserText.id);
     profileList.appendChild(noUserContainer);
-  noUserContainer.appendChild(noUserImg, noUserText);
+    noUserContainer.appendChild(noUserImg);
+    noUserContainer.appendChild(noUserText);
+    document.getElementById(noUserText.id).innerHTML = "No Users Found";
  } 
 }
 
