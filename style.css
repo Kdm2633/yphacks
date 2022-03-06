@@ -1,5 +1,4 @@
 /*To do:
--Add messaging and user stats css
 -Make CSS responsive
 -Add logo
 */
@@ -18,9 +17,6 @@ body{
 /*Left side CSS*/
 .left{
   grid-column: 4;
-  overflow: hidden;
-  display: inline-block;
-  width: fit-content;
 }
 
 .userSearch{
@@ -31,6 +27,9 @@ body{
   height: 50px;
   padding: 30px;
   background-color: #D4ECDD; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #searchInput{
@@ -46,6 +45,19 @@ body{
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: whitesmoke;
+}
+
+.userSearch button{
+	display: flex;
+	justify-content: center;
+	background-color: transparent;
+	border: transparent;
+}
+
+.userSearch button img{
+	width: 25px;
+	height: 25px;
+	margin: auto;
 }
 
 .searchOutput{
@@ -70,6 +82,128 @@ li{
   width: 350px;
   height: 50px;
   padding: 30px;
+  background-color: #345B63;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: center;
+}
+
+.userProfile img{
+  margin-right: 300px;
+  height: 60px;
+  width: 60px;
+  z-index: 0;
+}
+
+.userProfile p{
+  position: relative;
+  bottom: 60px;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  font-family: "open sans";
+  color: #D4ECDD;
+}
+
+.noUserFound img{
+  width: 25%;
+  height: 25%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.noUserFound h1{
+  color: red;
+  font-family: "Poppins", sans-serif;
+  font-style: bold;
+  font-size: 68px;
+}
+
+/*Right Side CSS*/
+.right{
+  grid-column: 5;
+}
+
+.userStats{
+  margin:auto;
+  margin-top: 50px;
+  border-radius: 30px;
+  width: 31.25em;
+  height: 50px;
+  padding: 30px;
+  background-color: #D4ECDD;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+}
+
+.userStats h1{
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  margin-left: 15px;
+  padding: 0px;
+}
+
+.userStats img{
+  width: 50px;
+  height: 50px;
+}
+
+.friendsListContainer{
+  margin:auto;
+  margin-top: 50px;
+  border: 50px, transparent;
+  border-radius: 30px;
+  width: 31.25em;
+  padding: 30px;
+  background-color: #D4ECDD; 
+  text-align: center;
+}
+
+
+
+
+/*For mobile*/
+@media only screen and (max-width: 768px) {
+  /*Top CSS*/
+
+ body{
+	 display: flex;
+		justify-content: center;
+		align-items: center;
+		justify-content: space-between;
+}
+
+  .left{
+		margin-top: 80px;
+		padding: 0px;
+}
+
+.userSearch{
+	margin: 0px;
+  width: 1em;
+  height: .666em;
+  background-color: aqua;
+	 display: flex;
+	 align-items: center;
+}
+
+#searchInput{
+  background-color: bisque;
+}
+
+.searchOutput{
+  margin:auto;
+  margin-top: 50px;
+  width: 15em;
+  background-color: #D4ECDD; 
+  text-align: center;
+}
+
+.userProfile{
+  display: inline-block;
+  width: 350px;
+  height: 50px;
   background-color: #345B63;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -110,42 +244,32 @@ li{
 
 /*Right Side CSS*/
 .right{
-  grid-column: 5;
-  overflow: hidden;
-  display: inline-block;
-  width: fit-content;
+	background-color: blanchedalmond;
 }
 
 .userStats{
-  margin:auto;
-  margin-top: 50px;
-  border-radius: 30px;
-  width: 500px;
-  height: 50px;
-  padding: 30px;
-  background-color: #D4ECDD;
-  vertical-align: middle;
+	margin: 0px;
+  width: 100px;
+  height: 80px;
+  padding: 0px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
 }
 
 .userStats h1{
   font-family: "Poppins", sans-serif;
-  font-size: 30px;
-  margin-left: 15px;
-  padding: 0px;
+  font-size: 1.8em;
+  margin-left: 1em;
 }
 
 .userStats img{
-  width: 50px;
-  height: 50px;
+  width: 3.13em;
+  height: 3.13em;
 }
 
 .friendsListContainer{
-  margin:auto;
-  margin-top: 50px;
-  border: 50px, transparent;
-  border-radius: 30px;
-  width: 500px;
-  padding: 30px;
-  background-color: #D4ECDD; 
-  text-align: center;
+  width: 31.25em;
+}
 }

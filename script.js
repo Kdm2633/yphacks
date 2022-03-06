@@ -9,7 +9,8 @@
 var search = document.getElementById("searchInput");
 search.addEventListener("keypress", event =>{
   if(event.key === "Enter"){
-   userSearch();
+    clearSearchOutput();   
+    userSearch();
   }
 });
 
@@ -62,7 +63,7 @@ function clearSearchOutput(){
     console.log("clear started");
     const profileList = document.querySelector(".profileList");
     const  profiles = document.querySelectorAll(".userProfile");
-    profileList.remove(profiles);
+    //profileList.remove(profiles);
     console.log("clear ended");
 }
 
