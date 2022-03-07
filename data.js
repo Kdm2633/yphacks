@@ -4,29 +4,28 @@ var users = [
         password: "bb",
         pfp: "assets/user.png",
         friendRequests: [],
-        friends: []
+        //friends: [users[1], users[2]]
     },
     {
         username: "kamyakdm",
         password: "rosesAreRed",
         pfp: "assets/user.png",
         friendRequests: [],
-        friends: ["bob", "sam"]
-        //friends: [users[0], users[4]]
+       // friends: [users[0], users[4]]
     },
     {
         username: "seanNN",
         password: "violetsAreBlue2",
         pfp: "assets/user.png",
         friendRequests: [],
-        friends: []
+        //friends: [users[0], users[3]]
     },
     {
         username: "niHal",
         password: "pythonSlitherR",
         pfp: "assets/user.png",
         friendRequests: [],
-        friends: []
+        //friends: [users[2]]
     },
     {
         username: "sam",

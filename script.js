@@ -5,6 +5,7 @@
 
 //user currently logged in
 //var loggedInUser = users[1];
+//loadInfo(users[1]);
 
 var search = document.getElementById("searchInput");
 search.addEventListener("keypress", event =>{
@@ -25,6 +26,7 @@ function testing(){
   for (var i = 0; i < users.length; i++) {
     if(users[i].username.includes(search.value)){
         addProfile(users[i].username, users[i].pfp);
+        //console.log(users[i].friends.length);
         numUsersFound++;
      }
   }
@@ -38,7 +40,6 @@ function testing(){
     noUserImg.setAttribute("src", "assets/mug-hot.png");
     const noUserText = document.createElement("H1");
     noUserText.id = "noUserFoundTxt";
-    console.log(noUserText.id);
     profileList.appendChild(noUserContainer);
     noUserContainer.appendChild(noUserImg);
     noUserContainer.appendChild(noUserText);
@@ -77,8 +78,12 @@ function removeFriend(){
   
 }
 
- function loadInfo(){
+ function loadInfo(user){
+  var loggedInUser = user;
+  var array = [1, 2, 3,5];
    console.log("checkpoint");
+   console.log(user.friends.length);
+   console.log(array.length);
   for (var i = 0; i < loggedInUser.friends.length; i++) {
     console.log(loggedInUser.friends[i]);    
     //addProfile(users[i].username, users[i].pfp);
