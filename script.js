@@ -56,6 +56,8 @@ function addProfile(user, picture){
     newUserImg.setAttribute("src", picture);
     const newUserName = document.createElement("p");
     newUserName.id= user;
+
+    //Adding elements to user profile container
     profileList.appendChild(newUserProfile);
     newUserProfile.appendChild(newUserImg);
     newUserProfile.appendChild(newUserName);
