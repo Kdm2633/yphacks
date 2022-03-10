@@ -81,13 +81,12 @@ function removeFriend(){
 }
 
  function loadInfo(user){
-  var loggedInUser = user;
-  var array = [1, 2, 3,5];
-   console.log("checkpoint");
-   console.log(user.friends.length);
-   console.log(array.length);
-  for (var i = 0; i < loggedInUser.friends.length; i++) {
-    console.log(loggedInUser.friends[i]);    
-    //addProfile(users[i].username, users[i].pfp);
+  for (var i = 0; i < users.length; i++) {
+    if(users[i].username == user){
+      for (var x = 0; x < user.friends.length; i++) {
+        console.log(user.friends[x]);    
+        //addProfile(users[i].username, users[i].pfp);
+      }
+     }
   }
  }
