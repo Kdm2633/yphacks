@@ -1,44 +1,56 @@
 var users = [
     {
+        id: 0,
         username: "bob",
         password: "bb",
         pfp: "assets/user.png",
         friendRequests: [],
-        friends: [users[1], users[2]]
+        friends: [1],
+        studyGroups: []
     },
     {
+        id: 1,
         username: "kamyakdm",
         password: "rosesAreRed",
         pfp: "assets/user.png",
         friendRequests: [],
-        friends: [users[0], users[4]]
+        friends: [0, 4],
+        studyGroups: ["AP Chem", "AP World"]
     },
     {
+        id: 2,
         username: "seanNN",
         password: "violetsAreBlue2",
         pfp: "assets/user.png",
         friendRequests: [],
-        friends: [users[0], users[3]]
+        friends: [],
+        studyGroups: []
     },
     {
+        id: 3,
         username: "niHal",
         password: "pythonSlitherR",
         pfp: "assets/user.png",
         friendRequests: [],
-        //friends: [users[2]]
+        friends: [],
+        studyGroups: []
     },
     {
+        id: 4,
         username: "sam",
         password: "eggs&greenham",
         pfp: "assets/user.png",
         friendRequests: [],
-        friends: []
+        friends: [1],
+        studyGroups: []
     },
     {
+        id: 5,
         username: "asdfghjklgd",
         password: "K3y$m@$hR0cKs",
         pfp: "assets/user.png",
         friendRequests: [],
-        friends: [] 
+        friends: [],
+        studyGroups: [] 
     }
 ]

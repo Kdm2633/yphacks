@@ -1,19 +1,29 @@
 //To Do:
-//Add function that displays friend list!
 //Add function that adds and removes friend from list.
 //Add function that matches user to people with similar study topics selected
 
-//user currently logged in
-//var loggedInUser = users[1];
-//loadInfo(users[1]);
-
+//Globals
 var search = document.getElementById("searchInput");
+const userPFP = document.getElementById("profilePic");
+
+//user currently logged in
+loadUserInfo("kamyakdm");
+
+//Events
 search.addEventListener("keypress", event =>{
   if(event.key === "Enter"){
     clearSearchOutput();   
     userSearch();
   }
 });
+
+userPFP.addEventListener("mouseenter", event => {
+console.log("hovered");
+});
+
+
+
+//Functions
 
 //Remove this after testing
 function testing(){
@@ -25,8 +35,7 @@ function testing(){
     //Goes through users collection to see if a user has the searched username
   for (var i = 0; i < users.length; i++) {
     if(users[i].username.includes(search.value)){
-        addProfile(users[i].username, users[i].pfp);
-        //console.log(users[i].friends.length);
+        addProfile("searchedList", users[i].username, users[i].pfp);
         numUsersFound++;
      }
   }
@@ -48,8 +57,8 @@ function testing(){
 }
 
 //Adds profiles found to outputs
-function addProfile(user, picture){
-    const profileList = document.getElementById("searchedList");
+function addProfile(target, user, picture){
+    const profileList = document.getElementById(target);
     const newUserProfile = document.createElement("DIV");
     newUserProfile.setAttribute("class","userProfile");
     const newUserImg = document.createElement("IMG");
@@ -80,13 +89,21 @@ function removeFriend(){
   
 }
 
- function loadInfo(user){
+//Loads the logged in user
+ function loadUserInfo(user){
+//Finds the user
   for (var i = 0; i < users.length; i++) {
-    if(users[i].username == user){
-      for (var x = 0; x < user.friends.length; i++) {
-        console.log(user.friends[x]);    
-        //addProfile(users[i].username, users[i].pfp);
+    if(users[i].username === user){
+      //Loads user's friend list
+      for (var x = 0; x < users[i].friends.length; x++) {
+        addProfile("friendsList", users[users[i].friends[x]].username, users[users[i].friends[x]].pfp);
       }
+
+      // Updates user stat bar
+      const numStudyGroups = document.getElementById("studyStats");
+      const numFriends = document.getElementById("friendStats");
+      userPFP.innerHTML = users[i].pfp
      }
   }
+
  }

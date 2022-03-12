@@ -9,13 +9,16 @@
 body{
   background-color: #112031;
   display: grid;
-  column-gap: 0px;
+  grid-template: 
+  "nav nav nav nav nav"
+  "nav left left right right";
+  gap: 0px;
   justify-content: space-around;
 }
 
 /*Left side CSS*/
 .left{
-  grid-column: 4;
+  grid-area: left;
 }
 
 .userSearch{
@@ -71,7 +74,7 @@ body{
 }
 
 /*For searched list and friends list*/
-li{
+#searchedList{
   list-style-type: none;
   display: inline-block;
 }
@@ -120,7 +123,7 @@ li{
 
 /*Right Side CSS*/
 .right{
-  grid-column: 5;
+ grid-area: right;
 }
 
 .userStats{
@@ -159,6 +162,10 @@ li{
   text-align: center;
 }
 
+#friendsList{
+  list-style-type: none;
+  display: inline-block;
+}
 
 
 
