@@ -1,0 +1,30 @@
+/* Navbar */
+
+#title {
+  background-color: #112031;
+  color: #ffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-container {
+  padding: 2% 8%;
+  font-size: 3rem;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+.logo-img {
+  width: 20%;
+  margin-right: 2.5%;
+}
