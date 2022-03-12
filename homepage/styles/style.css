@@ -190,11 +190,24 @@ li:hover a {
     all: unset;
   }
 }
+/* Why Section */
+.why-section {
+  padding: 7% 5%;
+  background-color: #152d35;
+  line-height: 1.5;
+}
+
+.why-text {
+  padding-top: 2%;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
 
 /* Product Examples */
 #product-showcase {
   padding: 7% 15%;
-  background-color: #152d35;
+  background-color: #112031;
 }
 
 .example1 {
@@ -218,7 +231,7 @@ li:hover a {
 #testimonials {
   padding: 7% 5%;
   line-height: 1.5rem;
-  background-color: #112031;
+  background-color: #152d35;
 }
 
 .testimonial-image {
@@ -254,14 +267,14 @@ li:hover a {
 #cta {
   padding: 7% 0%;
   line-height: 1.5rem;
-  background-color: #152d35;
+  background-color: #112031;
 }
 
 /* Footer */
 #footer {
   padding: 3% 0%;
   line-height: 1.5rem;
-  background-color: #112031;
+  background-color: #152d35;
 }
 
 .footer-icon {
