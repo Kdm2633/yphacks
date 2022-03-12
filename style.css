@@ -9,16 +9,13 @@
 body{
   background-color: #112031;
   display: grid;
-  grid-template: 
-  "nav nav nav nav nav"
-  "nav left left right right";
   gap: 0px;
   justify-content: space-around;
 }
 
 /*Left side CSS*/
 .left{
-  grid-area: left;
+  grid-column: 4;
 }
 
 .userSearch{
@@ -88,24 +85,31 @@ body{
   background-color: #345B63;
   margin-top: 5px;
   margin-bottom: 5px;
-  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
 }
 
-.userProfile img{
-  margin-right: 300px;
+.userProfileImg{
+  /*margin-right: 300px;*/
   height: 60px;
   width: 60px;
   z-index: 0;
 }
 
 .userProfile p{
-  position: relative;
+  /*position: relative;
   bottom: 60px;
   margin: auto;
-  text-align: center;
+  text-align: center;*/
   font-size: 30px;
   font-family: "open sans";
   color: #D4ECDD;
+}
+
+.addButton{
+  height: 60px;
+  width: 60px;
 }
 
 .noUserFound img{
@@ -123,7 +127,7 @@ body{
 
 /*Right Side CSS*/
 .right{
- grid-area: right;
+ grid-column: 5;
 }
 
 .userStats{
@@ -150,6 +154,7 @@ body{
   width: 50px;
   height: 50px;
 }
+
 
 .friendsListContainer{
   margin:auto;

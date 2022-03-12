@@ -5,9 +5,10 @@
 //Globals
 var search = document.getElementById("searchInput");
 const userPFP = document.getElementById("profilePic");
+var userID;
 
 //user currently logged in
-loadUserInfo("kamyakdm");
+loadUserInfo("bob");
 
 //Events
 search.addEventListener("keypress", event =>{
@@ -63,14 +64,24 @@ function addProfile(target, user, picture){
     newUserProfile.setAttribute("class","userProfile");
     const newUserImg = document.createElement("IMG");
     newUserImg.setAttribute("src", picture);
+    newUserImg.setAttribute("class", "userProfileImg");
     const newUserName = document.createElement("p");
-    newUserName.id= user;
+    newUserName.id= user + "user";
 
     //Adding elements to user profile container
     profileList.appendChild(newUserProfile);
     newUserProfile.appendChild(newUserImg);
     newUserProfile.appendChild(newUserName);
-    document.getElementById(user).innerHTML = user;
+    if (target === "searchedList"){
+      const addBtn = document.createElement("IMG");
+      addBtn.setAttribute("src", "assets/add-icon.png");
+      addBtn.setAttribute("class", "addButton");
+      var userBtn = user + "AddButton";
+      addBtn.id= userBtn;
+      newUserProfile.appendChild(addBtn);
+      document.getElementById(addBtn.id).setAttribute("onclick", "addFriend("+user+")");
+    }
+    document.getElementById(newUserName.id).innerHTML = user;
 }
 
 //clears search output everytime a user is searched
@@ -81,8 +92,8 @@ function clearSearchOutput(){
     }
 }
 
-function addFriend(){
-  
+function addFriend(user){
+  console.log("hello " + user);
 }
 
 function removeFriend(){
@@ -94,6 +105,8 @@ function removeFriend(){
 //Finds the user
   for (var i = 0; i < users.length; i++) {
     if(users[i].username === user){
+      //This variable allows for the user's id to be called anywhere
+      userID = i; 
       //Loads user's friend list
       for (var x = 0; x < users[i].friends.length; x++) {
         addProfile("friendsList", users[users[i].friends[x]].username, users[users[i].friends[x]].pfp);
