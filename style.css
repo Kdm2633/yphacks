@@ -1,6 +1,40 @@
 /*To do:
 -Make CSS responsive
 */
+
+/*Nav*/
+#navbar {
+  background-color: #112031;
+  color: #ffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+/* Brand Name */
+.brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Containers */
+
+.navbar-container {
+  padding: 2% 8%;
+  font-size: 3rem;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+.logo-img {
+  width: 20%;
+}
+/*Nav*/
 *{
   margin: 0;
   padding: 0;
@@ -16,6 +50,7 @@ body{
 /*Left side CSS*/
 .left{
   grid-column: 4;
+  grid-row: 2;
 }
 
 .userSearch{
@@ -128,6 +163,7 @@ body{
 /*Right Side CSS*/
 .right{
  grid-column: 5;
+ grid-row: 2;
 }
 
 .userStats{

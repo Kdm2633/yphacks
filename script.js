@@ -22,8 +22,6 @@ userPFP.addEventListener("mouseenter", event => {
 console.log("hovered");
 });
 
-
-
 //Functions
 
 //Remove this after testing
