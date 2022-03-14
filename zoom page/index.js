@@ -1,0 +1,1 @@
+document.getElementsByClassName('intro-btn')[0].addEventListener('click', function() {alert("This is not avaible right now, it will be soon!")})
