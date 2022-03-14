@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+   <!-- importing fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" 
+   rel="stylesheet">
+<!-- Script that loads user data -->
+<script src="./data.js"></script><script src="data.js"></script>
+</head>
+<body>
+  <!-- Containers-->
+
+   <div class="left" class =>
+  <div class="userSearch">
+   <input id="searchInput" type="text" placeholder="Search User"></input>
+   <button onclick="clearSearchOutput()"><img src="./assets/x.png"></button>
+ </div>
+ <div class="searchOutput">
+  <ul>
+   <li id="searchedList"> <!-- search results profiles -->
+ </li>
+ </ul>
+ </div>
+   </div> <!-- end of left -->
+ <div class ="right">
+ <div class ="userStats"> 
+  <h1 id="friendStats">n/a</h1>
+  <img src="./assets/user.png">
+  <h1 id="studyStats">n/a</h1>
+  <img src="./assets/book.png">
+  <img id="profilePic" src="./assets/user.png">
+ </div>
+ <div class="friendsListContainer">
+  <ul>
+    <li id="friendsList"> <!-- friends profiles -->
+  </li>
+  </ul>
+ </div>
+ </div> <!-- end of right -->
+ <!-- We may switch this out for study group reccomendations
+ <div class="messagesContainers"></div> -->
+     
+ </body>
+ <script src="./script.js"></script>
+
+</html>
