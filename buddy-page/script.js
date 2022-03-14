@@ -24,11 +24,6 @@ console.log("hovered");
 
 //Functions
 
-//Remove this after testing
-function testing(){
-    console.log("123");
-}
-
   function userSearch(){
     var numUsersFound = 0;
     //Goes through users collection to see if a user has the searched username
@@ -91,11 +86,13 @@ function clearSearchOutput(){
 }
 
 function addFriend(user){
-  console.log("hello " + user);
-}
+ //For prototyping purposes:
 
-function removeFriend(){
-  
+//the user that would’ve been clicked on will have their user id sent to the logged in user’s friend requests
+
+//if the logged in user is already in the added user’s requests OR the added user adds the logged in user, the user’s ids  is sent to their friends list and vice versa. 
+
+//all updates to the users data are made everytime the page is reloaded by the loadUserInfo() function
 }
 
 //Loads the logged in user
