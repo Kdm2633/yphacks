@@ -2,43 +2,14 @@
 -Make CSS responsive
 */
 
-/*Nav*/
-#navbar {
-  background-color: #112031;
-  color: #ffff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-}
-
-/* Brand Name */
-.brand {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-/* Containers */
-
-.navbar-container {
-  padding: 2% 8%;
-  font-size: 3rem;
-}
-
-.nav-item {
-  padding: 0 18px;
-}
-
-.nav-link {
-  font-size: 1.2rem;
-}
-
-.logo-img {
-  width: 20%;
-}
-/*Nav*/
 *{
   margin: 0;
   padding: 0;
 }
+
+/*Nav*/
+   
+/*Nav*/
 
 body{
   background-color: #112031;
@@ -51,6 +22,8 @@ body{
 .left{
   grid-column: 4;
   grid-row: 2;
+  background-color: #112031;
+  border-color: #112031;
 }
 
 .userSearch{
@@ -164,6 +137,8 @@ body{
 .right{
  grid-column: 5;
  grid-row: 2;
+ background-color: #112031;
+ border-color: #112031;
 }
 
 .userStats{
@@ -213,93 +188,132 @@ body{
 /*For mobile*/
 @media only screen and (max-width: 768px) {
   /*Top CSS*/
-
- body{
-	 display: flex;
-		justify-content: center;
-		align-items: center;
-		justify-content: space-between;
-}
-
-  .left{
-		margin-top: 80px;
-		padding: 0px;
+.left{
+  grid-column:1;
+  grid-row: 2;
 }
 
 .userSearch{
-	margin: 0px;
-  width: 1em;
-  height: .666em;
-  background-color: aqua;
-	 display: flex;
-	 align-items: center;
+  margin:auto;
+  margin-top: 9%;
+  border-radius: 5.4%;
+  width: 90%;
+  height: 9%;
+  /* padding: 30px; */
+  background-color: #D4ECDD;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #searchInput{
-  background-color: bisque;
+  outline: none;
+  border: none;
+  float: left;
+  border-radius: 30px;
+  color: #112031;
+  font-family: "open sans", sans-serif;
+  font-size: medium;
+  padding: 2.7%;
+  padding-right: 27%;
+  padding-top: 1.8%;
+  padding-bottom: 1.8%;
+  background-color: whitesmoke;
+}
+
+.userSearch button{
+	display: flex;
+	justify-content: center;
+	background-color: transparent;
+	border: transparent;
+}
+
+.userSearch button img{
+	width: 4.5%;
+	height: 4.5%;
+	margin: auto;
 }
 
 .searchOutput{
   margin:auto;
-  margin-top: 50px;
-  width: 15em;
+  margin-top: 9%;
+  border: 9%, transparent;
+  border-radius: 5.4%;
+  width: 90%;
+  padding: 5.4%;
   background-color: #D4ECDD; 
   text-align: center;
 }
 
-.userProfile{
+/*For searched list and friends list*/
+#searchedList{
+  list-style-type: none;
   display: inline-block;
-  width: 350px;
-  height: 50px;
-  background-color: #345B63;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  justify-content: center;
 }
 
+.userProfile{
+  display: inline-block;
+  border-radius: 5.4%;
+  width: 63%;
+  height: 9%;
+  padding: 5.4%;
+  background-color: #345B63;
+  margin-top: 0.9%;
+  margin-bottom: 0.9%;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+}
 
-.userProfile img{
-  margin-right: 300px;
-  height: 60px;
-  width: 60px;
+.userProfileImg{
+  /*margin-right: 300px;*/
+  height: 10.8%;
+  width: 10.8%;
   z-index: 0;
 }
 
 .userProfile p{
-  position: relative;
+  /*position: relative;
   bottom: 60px;
   margin: auto;
-  text-align: center;
-  font-size: 30px;
+  text-align: center;*/
+  font-size: 5.4%;
   font-family: "open sans";
   color: #D4ECDD;
 }
 
+.addButton{
+  height: 10.8%;
+  width: 10.8%;
+}
+
 .noUserFound img{
-  width: 25%;
-  height: 25%;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  width: 75%;
+  height: 75%;
+  margin-top: 4.5%;
+  margin-bottom: 4.5%;
 }
 
 .noUserFound h1{
-  color: red;
+  color: #112031;
   font-family: "Poppins", sans-serif;
-  font-style: bold;
-  font-size: 68px;
+  font-size: 10.8%;
 }
 
-/*Right Side CSS*/
+/*Bottom CSS*/
 .right{
-	background-color: blanchedalmond;
+ grid-column: 1;
+ grid-row: 3;
 }
 
 .userStats{
-	margin: 0px;
-  width: 100px;
-  height: 80px;
-  padding: 0px;
-  background-color: aqua;
+  margin:auto;
+  margin-top: 50px;
+  border-radius: 30px;
+  width: 90%;
+  height: 9%;
+  padding: 5.4%;
+  background-color: #D4ECDD;
   display: flex;
   align-items: center;
   justify-content:space-evenly;
@@ -307,16 +321,31 @@ body{
 
 .userStats h1{
   font-family: "Poppins", sans-serif;
-  font-size: 1.8em;
-  margin-left: 1em;
+  font-size: 5.4%;
+  margin-left: 2.7%;
+  padding: 0%;
 }
 
 .userStats img{
-  width: 3.13em;
-  height: 3.13em;
+  width: 9%;
+  height: 9%;
 }
 
+
 .friendsListContainer{
-  width: 31.25em;
+  margin:auto;
+  margin-top: 9%;
+  border: 9%, transparent;
+  border-radius: 5.4%;
+  width: 90%;
+  padding: 5.4%;
+  background-color: #D4ECDD; 
+  text-align: center;
 }
+
+#friendsList{
+  list-style-type: none;
+  display: inline-block;
+}
+ 
 }

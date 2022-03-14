@@ -7,8 +7,8 @@ var search = document.getElementById("searchInput");
 const userPFP = document.getElementById("profilePic");
 var userID;
 
-//user currently logged in
-loadUserInfo("bob");
+//user currently logged in for testing purposes
+loadUserInfo("sam");
 
 //Events
 search.addEventListener("keypress", event =>{
@@ -113,7 +113,9 @@ function removeFriend(){
       // Updates user stat bar
       const numStudyGroups = document.getElementById("studyStats");
       const numFriends = document.getElementById("friendStats");
-      userPFP.innerHTML = users[i].pfp
+      userPFP.setAttribute("src", users[i].pfp);
+      numStudyGroups.innerHTML = users[i].studyGroups.length;
+      numFriends.innerHTML = users[i].friends.length;
      }
   }
 
