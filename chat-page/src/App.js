@@ -4,6 +4,8 @@ import ChatFeed from './components/ChatFeed';
 import LoginForm from './components/LoginForm';
 import './App.css';
 
+let port = process.env.PORT || 5000;
+
 const projectID = '9473fd9f-ede6-4af2-8e68-5b81bccb605b';
 
 const App = () => {
